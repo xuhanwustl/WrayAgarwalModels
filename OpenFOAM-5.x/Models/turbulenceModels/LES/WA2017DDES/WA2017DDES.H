@@ -54,6 +54,12 @@ Description
             CDES        0.41
             Cd1         4.0
         } 
+        
+        delta               maxDeltaxyz;
+        maxDeltaxyzCoeffs
+        {
+            deltaCoeff      2;
+        }
 
 SourceFiles
     WA2017DDES.C

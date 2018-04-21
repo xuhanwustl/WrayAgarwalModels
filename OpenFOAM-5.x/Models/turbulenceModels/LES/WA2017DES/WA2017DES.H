@@ -32,6 +32,8 @@ Description
     The RANS part is the WA-2017 version of the Wray-Agarwal model on the 
     NASA Turbulence Modeling Resource (TMR) website
 
+    The delta in LES length scale is chosen to be the maximal cell size
+    
     Field blendfactor_ is used to interpolate different schemes between LES 
     and RANS region
     
@@ -55,7 +57,13 @@ Description
             C2ke        1.6704  (C1ke/sqr(kappa) + sigmake)
             C2kw        1.2132  (C1kw/sqr(kappa) + sigmakw)
             CDES        0.41
-        } 
+        }
+        
+        delta               maxDeltaxyz;
+        maxDeltaxyzCoeffs
+        {
+            deltaCoeff      2;
+        }
 
 SourceFiles
     WA2017DES.C

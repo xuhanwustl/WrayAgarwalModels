@@ -56,6 +56,12 @@ Description
             C2kw        1.2132  (C1kw/sqr(kappa) + sigmakw)
             CDES        0.41
         } 
+        
+        delta               maxDeltaxyz;
+        maxDeltaxyzCoeffs
+        {
+            deltaCoeff      2;
+        }
 
 SourceFiles
     WA2017DESDIT.C

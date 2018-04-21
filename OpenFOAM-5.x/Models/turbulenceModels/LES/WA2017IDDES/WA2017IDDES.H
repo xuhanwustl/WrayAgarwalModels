@@ -57,6 +57,12 @@ Description
             cl          3.55
             ct          1.63
         } 
+        
+        delta               maxDeltaxyz;
+        maxDeltaxyzCoeffs
+        {
+            deltaCoeff      2;
+        }
 
 
 SourceFiles
