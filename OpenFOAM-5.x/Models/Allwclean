@@ -1,0 +1,16 @@
+#!/bin/sh
+
+rm *.so
+rm -r ./*/lnInclude
+rm -r ./*/Make/linux64GccDPInt??Opt
+
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Parse arguments for library compilation
+targetType=libso
+
+wclean $targetType turbulenceModels
+wclean $targetType incompressible
+wclean $targetType compressible
+
+# ----------------------------------------------------------------- end-of-file
