@@ -1,3 +1,0 @@
-source /opt/openfoam5/etc/bashrc
-./Allwclean
-./Allwmake
