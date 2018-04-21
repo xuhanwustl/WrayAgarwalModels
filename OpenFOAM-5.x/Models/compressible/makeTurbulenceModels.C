@@ -17,17 +17,57 @@ namespace Foam
 }
 
 ///////////////////     RANS models      ///////////////////
-/*
-#include "WD2017.H"
+
+#include "WrayAgarwal2017.H"
 makeTemplatedTurbulenceModel
 (
     fluidThermoCompressibleTurbulenceModel,
     RAS,
-    WD2017
+    WrayAgarwal2017
 );
-*/
+
+#include "WrayAgarwal2017m.H"
+makeTemplatedTurbulenceModel
+(
+    fluidThermoCompressibleTurbulenceModel,
+    RAS,
+    WrayAgarwal2017m
+);
+
+#include "WrayAgarwal2018.H"
+makeTemplatedTurbulenceModel
+(
+    fluidThermoCompressibleTurbulenceModel,
+    RAS,
+    WrayAgarwal2018
+);
+
+#include "WrayAgarwal2018EB.H"
+makeTemplatedTurbulenceModel
+(
+    fluidThermoCompressibleTurbulenceModel,
+    RAS,
+    WrayAgarwal2018EB
+);
+
 ///////////////////     LES models      ///////////////////
-/*
+
+#include "WA2017DES.H"
+makeTemplatedTurbulenceModel
+(
+    fluidThermoCompressibleTurbulenceModel,
+    LES,
+    WA2017DES
+);
+
+#include "WA2017DDES.H"
+makeTemplatedTurbulenceModel
+(
+    fluidThermoCompressibleTurbulenceModel,
+    LES,
+    WA2017DDES
+);
+
 #include "WA2017IDDES.H"
 makeTemplatedTurbulenceModel
 (
@@ -35,4 +75,3 @@ makeTemplatedTurbulenceModel
     LES,
     WA2017IDDES
 );
-*/
