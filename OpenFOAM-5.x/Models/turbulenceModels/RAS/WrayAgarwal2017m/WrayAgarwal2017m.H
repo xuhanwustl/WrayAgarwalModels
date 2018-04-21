@@ -35,7 +35,12 @@ Description
     Added a bound on the second destruction term in the Rnu transport 
     equation to fix the significant eddy viscosity drop in the zero strain 
     rate region (e.g. channel center)
-
+    
+    Reference:
+    \verbatim
+        https://turbmodels.larc.nasa.gov/wray_agarwal.html
+    \endverbatim
+    
     The default model coefficients are
         WrayAgarwal2017mCoeffs
         {
