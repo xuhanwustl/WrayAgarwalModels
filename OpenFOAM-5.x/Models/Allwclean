@@ -8,6 +8,5 @@ targetType=libso
 wclean $targetType turbulenceModels
 wclean $targetType incompressible
 wclean $targetType compressible
-wclean $targetType
 
 # ----------------------------------------------------------------- end-of-file
