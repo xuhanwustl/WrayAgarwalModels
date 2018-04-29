@@ -39,10 +39,10 @@ tmp<volScalarField> WrayAgarwal2018EB<BasicTurbulenceModel>::LR2() const
 {
     const volScalarField Clnu = (4.0+sqrt(this->chi()))*this->nu();
 
-  return max(C3kw_*Rnu_, Clnu) / (S_ + Clnu/sqr(dimensionedScalar("Lref", 
-                                                                  dimensionSet(0, 1, 0, 0, 0), 
-                                                                  Lref_.value())
-                                               )
+    return max(C3kw_*Rnu_, Clnu) / (S_ + Clnu/sqr(dimensionedScalar("Lref", 
+                                                                    dimensionSet(0, 1, 0, 0, 0), 
+                                                                    Lref_.value())
+                                                 )
                                    );
 }
 
