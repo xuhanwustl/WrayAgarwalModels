@@ -30,9 +30,31 @@ Group
 Description
     This boundary condition provides a gradient condition based on a field.
     It is originally developed for applying rough wall boundary condition 
-    required by roughness corrected Spalart-Allmaras and Wray-Agarwal model.
-
+    required by roughness corrected Spalart-Allmaras and Wray-Agarwal models.
+    
+    The patch values are calculated using:
+        \f[
+            x_p = x_c + \frac{\nabla(x)}{\Delta}
+            \nabla(x) = gradCoeff field
+        \f]
+    where
+    \vartable
+        x_p      | patch values
+        x_c      | internal field values
+        \nabla(x)| gradient (calculated by a user-specified field and a coefficient)
+        \Delta   | inverse distance from patch face centre to cell centre
+        gradCoeff| Gradient coefficient
+        field    | Base field
+    \endvartable
+    
 Usage
+    \table
+        Property     | Description             | Required    | Default value
+        gradient     | initial gradient        | yes         |
+        field        | base field              | yes         |
+        gradCoeff    | gradient coefficient    | yes         |
+    \endtable
+    
     Example of the boundary condition specification:
     \verbatim
     <patchName>
@@ -43,14 +65,6 @@ Usage
         gradCoeff       2.0;
     }
     \endverbatim
-
-Note
-    The example above gives the usage for supplying:
-        initial gradient value
-        field name
-        gradient coefficient
-        
-    The gradient is calculated as gradient = gradCoeff * field
 
 See also
     Foam::fixedGradientFvPatchField
