@@ -50,6 +50,14 @@ makeTemplatedTurbulenceModel
     WrayAgarwal2018EB
 );
 
+#include "WrayAgarwal2017mDV.H"
+makeTemplatedTurbulenceModel
+(
+    fluidThermoCompressibleTurbulenceModel,
+    RAS,
+    WrayAgarwal2017mDV
+);
+
 ///////////////////     LES models      ///////////////////
 
 #include "WA2017DES.H"
